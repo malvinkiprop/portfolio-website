@@ -592,161 +592,128 @@ img {
    PROJECTS SECTION
 ======================================== */
 
+/* ========================================
+   PROJECTS SECTION
+======================================== */
+
 .projects-section {
     min-height: 100vh;
     padding: 120px 8%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
 }
+
 
 /* Section heading */
 
-.section-heading {
+.projects-section .section-heading {
+    max-width: 850px;
+    margin: 0 auto 70px;
     text-align: center;
-    max-width: 750px;
-    margin-bottom: 60px;
 }
 
-.section-label {
-    color: #2dd4bf;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
-
-.section-heading h2 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    margin-bottom: 20px;
-}
-
-.section-intro {
+.projects-section .section-description {
+    max-width: 650px;
+    margin: 20px auto 0;
     color: #a7b4c5;
-    font-size: 1rem;
     line-height: 1.8;
 }
 
-/* Coming soon container */
 
-.projects-coming-soon {
-    width: 100%;
-    max-width: 1000px;
-    min-height: 400px;
+/* ========================================
+   FEATURED PROJECT CARD
+======================================== */
 
+.project-card {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 70px;
-
-    padding: 60px;
-
-    background: rgba(11, 23, 40, 0.65);
-    border: 1px solid rgba(45, 212, 191, 0.2);
-    border-radius: 20px;
-
-    position: relative;
+    flex-direction: column;
+    width: 100%;
     overflow: hidden;
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    border-radius: 24px;
+    background: rgba(5, 20, 30, 0.85);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(45, 212, 191, 0.5);
 
     box-shadow:
-        0 0 40px rgba(20, 184, 166, 0.05),
-        inset 0 0 40px rgba(20, 184, 166, 0.03);
+        0 25px 80px rgba(20, 184, 166, 0.12);
 }
 
-/* Futuristic background grid */
 
-.projects-coming-soon::before {
-    content: "";
-    position: absolute;
-    inset: 0;
+/* ========================================
+   PROJECT VISUAL
+======================================== */
 
-    background-image:
-        linear-gradient(
-            rgba(45, 212, 191, 0.04) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(45, 212, 191, 0.04) 1px,
-            transparent 1px
-        );
-
-    background-size: 40px 40px;
-
-    pointer-events: none;
+.project-visual {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    background: #06131c;
 }
 
-/* Animated glow */
 
-.projects-coming-soon::after {
-    content: "";
-    position: absolute;
+/* Data visualization grid */
 
-    width: 250px;
-    height: 250px;
-
-    background: rgba(20, 184, 166, 0.08);
-    border-radius: 50%;
-    filter: blur(70px);
-
-    top: -100px;
-    right: -80px;
-
-    pointer-events: none;
-}
-
-/* Data visualization icon */
-
-.project-grid-icon {
-    width: 230px;
-    height: 230px;
-
-    border: 1px solid rgba(45, 212, 191, 0.3);
-    border-radius: 16px;
+.project-visual-grid {
+    width: 280px;
+    height: 280px;
 
     position: relative;
-    flex-shrink: 0;
+
+    border: 1px solid rgba(45, 212, 191, 0.3);
+    border-radius: 20px;
 
     background:
         linear-gradient(
-            rgba(20, 184, 166, 0.04),
+            rgba(20, 184, 166, 0.05),
             rgba(20, 184, 166, 0.01)
         );
 
     box-shadow:
-        0 0 25px rgba(20, 184, 166, 0.08);
+        0 0 40px rgba(20, 184, 166, 0.08);
 }
+
 
 /* Grid lines */
 
-.grid-line {
+.visual-line {
     position: absolute;
     background: rgba(45, 212, 191, 0.15);
 }
 
-.line-1 {
+.vertical-line-1 {
     width: 1px;
     height: 100%;
     left: 33%;
 }
 
-.line-2 {
+.vertical-line-2 {
     width: 1px;
     height: 100%;
     left: 66%;
 }
 
-.line-3 {
+.horizontal-line-1 {
     height: 1px;
     width: 100%;
-    top: 50%;
+    top: 33%;
 }
+
+.horizontal-line-2 {
+    height: 1px;
+    width: 100%;
+    top: 66%;
+}
+
 
 /* Data nodes */
 
-.data-node {
+.visual-node {
     position: absolute;
 
     width: 12px;
@@ -757,41 +724,42 @@ img {
     background: #2dd4bf;
 
     box-shadow:
-        0 0 10px #2dd4bf,
-        0 0 25px rgba(45, 212, 191, 0.5);
+        0 0 12px #2dd4bf,
+        0 0 30px rgba(45, 212, 191, 0.5);
 
-    animation: dataPulse 2.5s infinite ease-in-out;
+    animation: projectPulse 2.5s infinite ease-in-out;
 }
 
-.node-1 {
-    top: 25%;
-    left: 25%;
+.node-a {
+    top: 20%;
+    left: 22%;
 }
 
-.node-2 {
-    top: 40%;
-    left: 65%;
+.node-b {
+    top: 35%;
+    left: 70%;
     animation-delay: 0.5s;
 }
 
-.node-3 {
+.node-c {
     top: 70%;
-    left: 40%;
+    left: 42%;
     animation-delay: 1s;
 }
 
-.node-4 {
-    top: 75%;
-    left: 75%;
+.node-d {
+    top: 78%;
+    left: 78%;
     animation-delay: 1.5s;
 }
 
-@keyframes dataPulse {
+
+@keyframes projectPulse {
 
     0%,
     100% {
         transform: scale(1);
-        opacity: 0.7;
+        opacity: 0.65;
     }
 
     50% {
@@ -800,83 +768,343 @@ img {
     }
 }
 
-/* Coming soon text */
 
-.coming-soon-content {
-    max-width: 500px;
-    position: relative;
-    z-index: 1;
+/* Corn icon */
+
+.project-icon {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(15, 23, 42, 0.95);
+
+    border: 1px solid rgba(45, 212, 191, 0.35);
+
+    font-size: 3rem;
+
+    box-shadow:
+        0 0 30px rgba(20, 184, 166, 0.2);
 }
 
-.coming-soon-status {
+
+/* Project status */
+
+.project-status {
+    margin-top: 30px;
+
     color: #2dd4bf;
-    font-size: 0.75rem;
+
+    font-size: 0.7rem;
     font-weight: 700;
+
     letter-spacing: 3px;
+}
+
+
+/* ========================================
+   PROJECT CONTENT
+======================================== */
+
+.project-content {
+     width: 100%;
+    padding: 45px;
+}
+
+
+.project-category {
+    color: #2dd4bf;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
     margin-bottom: 15px;
 }
 
-.coming-soon-content h3 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
+
+.project-content h3 {
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    margin-bottom: 8px;
+
+    line-height: 1.1;
 }
 
-.coming-soon-content > p {
-    color: #a7b4c5;
-    line-height: 1.8;
+
+.project-content h4 {
+    color: #b8c5d6;
+
+    font-size: 1.05rem;
+    font-weight: 500;
+
     margin-bottom: 25px;
 }
 
-/* Project focus tags */
 
-.project-focus {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.project-description {
+    color: #a7b4c5;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+    margin-bottom: 35px;
 }
 
-.project-focus span {
-    padding: 8px 14px;
 
-    border: 1px solid rgba(45, 212, 191, 0.25);
+/* ========================================
+   PROJECT RESULTS
+======================================== */
+
+.project-results {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+
+.result-card {
+    padding: 18px 12px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(45, 212, 191, 0.15);
+
+    border-radius: 12px;
+
+    background:
+        rgba(20, 184, 166, 0.04);
+}
+
+
+.result-card strong {
+    display: block;
+
+    color: #2dd4bf;
+
+    font-size: 1.35rem;
+
+    margin-bottom: 5px;
+}
+
+
+.result-card span {
+    color: #8f9caf;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ========================================
+   PROJECT WORKFLOW
+======================================== */
+
+.project-workflow {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+.project-workflow span {
+    padding: 7px 11px;
+
+    border:
+        1px solid
+        rgba(45, 212, 191, 0.18);
+
     border-radius: 999px;
 
-    color: #b8c5d6;
-    background: rgba(20, 184, 166, 0.05);
+    color: #a7b4c5;
+
+    font-size: 0.7rem;
+}
+
+
+/* ========================================
+   PROJECT TECHNOLOGIES
+======================================== */
+
+.project-technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-bottom: 30px;
+}
+
+
+.project-technologies span {
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(148, 163, 184, 0.07);
+
+    color: #c4cedc;
+
+    font-size: 0.72rem;
+}
+
+
+/* ========================================
+   PROJECT BUTTONS
+======================================== */
+
+.project-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.project-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
 
     font-size: 0.8rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        all 0.3s ease;
 }
 
-/* Responsive */
 
-@media (max-width: 800px) {
+.project-btn-primary {
+    background: #2dd4bf;
+
+    color: #07111f;
+}
+
+
+.project-btn-primary:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 25px rgba(45, 212, 191, 0.3);
+}
+
+
+.project-btn-secondary {
+    border:
+        1px solid
+        rgba(45, 212, 191, 0.3);
+
+    color: #b8c5d6;
+}
+
+
+.project-btn-secondary:hover {
+    border-color: #2dd4bf;
+
+    color: #2dd4bf;
+}
+
+
+/* ========================================
+   PROJECT RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+
+    .project-visual {
+        min-height: 400px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(45, 212, 191, 0.12);
+    }
+
+    .project-content {
+        padding: 45px 35px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
 
     .projects-section {
-        padding: 90px 6%;
+        padding: 90px 5%;
     }
 
-    .projects-coming-soon {
+    .project-visual {
+        min-height: 330px;
+    }
+
+    .project-visual-grid {
+        width: 220px;
+        height: 220px;
+    }
+
+    .project-icon {
+        width: 70px;
+        height: 70px;
+
+        font-size: 2.3rem;
+    }
+
+    .project-content {
+        padding: 35px 25px;
+    }
+
+    .project-results {
+        grid-template-columns: 1fr;
+    }
+
+    .project-actions {
         flex-direction: column;
-        text-align: center;
-        gap: 40px;
-        padding: 45px 30px;
     }
 
-    .project-focus {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 500px) {
-
-    .project-grid-icon {
-        width: 190px;
-        height: 190px;
+    .project-btn {
+        width: 100%;
     }
 
-    .coming-soon-content h3 {
-        font-size: 1.8rem;
-    }
 }
 /* ========================================
    ABOUT ME SECTION
@@ -1555,6 +1783,53 @@ img {
         width: 100%;
         min-height: 50px;
         padding: 14px 20px;
+    }
+
+}
+/* PROJECT IMAGE */
+
+.project-visual {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    background: #06131c;
+}
+
+.project-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.project-visual:hover .project-image {
+    transform: scale(1.03);
+}
+@media (max-width: 700px) {
+
+    .project-visual {
+        min-height: 280px;
+        border-radius: 16px;
+    }
+
+    .project-image {
+        min-height: 280px;
+    }
+
+}
+@media (max-width: 700px) {
+
+    .project-visual {
+        height: 300px;
+    }
+
+    .project-content {
+        padding: 25px;
     }
 
 }
