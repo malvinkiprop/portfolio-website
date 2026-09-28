@@ -1579,3 +1579,58 @@ img {
     }
 
 }
+/* =========================================
+   CONTACT FORM STATUS
+   ========================================= */
+
+.form-status {
+    min-height: 20px;
+
+    margin-top: 5px;
+
+    color: #2dd4bf;
+
+    font-size: 0.85rem;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   MOBILE CONTACT FORM
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 70px 5%;
+    }
+
+    .contact-container {
+        width: 100%;
+    }
+
+    .contact-form-wrapper {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-submit {
+        width: 100%;
+        min-height: 50px;
+        padding: 14px 20px;
+    }
+
+}
