@@ -284,9 +284,9 @@ img {
 
     text-align: center;
 
-    padding: 80px 6%;
+    padding: 70px 6% 90px;
 
-    gap: 50px;
+    gap: 45px;
 
     overflow: hidden;
 }
@@ -299,32 +299,32 @@ img {
 .hero-image {
     position: relative;
 
+    width: 100%;
+
     display: flex;
 
     justify-content: center;
     align-items: center;
 
-    width: 100%;
-
     flex-shrink: 0;
 }
 
 
-/* Soft futuristic glow */
+/* Glow */
 
 .hero-image::before {
     content: "";
 
     position: absolute;
 
-    width: 270px;
-    height: 270px;
+    width: 350px;
+    height: 350px;
 
     border-radius: 50%;
 
     background: rgba(20, 184, 166, 0.12);
 
-    filter: blur(35px);
+    filter: blur(45px);
 
     z-index: 0;
 
@@ -332,21 +332,19 @@ img {
 }
 
 
-/* Outer futuristic ring */
+/* Outer ring */
 
 .hero-image::after {
     content: "";
 
     position: absolute;
 
-    width: 260px;
-    height: 260px;
+    width: 335px;
+    height: 335px;
 
-    border: 1px solid rgba(20, 184, 166, 0.28);
+    border: 1px solid rgba(45, 212, 191, 0.35);
 
     border-radius: 50%;
-
-    transform: rotate(-15deg);
 
     z-index: 0;
 
@@ -354,11 +352,14 @@ img {
 }
 
 
-/* Profile photo */
+/* Photo */
 
 .hero-image img {
-    width: 240px;
-    height: 240px;
+    width: 310px;
+    height: 310px;
+
+    min-width: 310px;
+    min-height: 310px;
 
     aspect-ratio: 1 / 1;
 
@@ -366,7 +367,7 @@ img {
 
     border-radius: 50%;
 
-    border: 3px solid #14b8a6;
+    border: 4px solid #14b8a6;
 
     padding: 5px;
 
@@ -381,8 +382,8 @@ img {
     flex-shrink: 0;
 
     box-shadow:
-        0 0 20px rgba(20, 184, 166, 0.5),
-        0 0 50px rgba(20, 184, 166, 0.2);
+        0 0 25px rgba(20, 184, 166, 0.55),
+        0 0 70px rgba(20, 184, 166, 0.20);
 
     transition:
         transform 0.4s ease,
@@ -394,8 +395,8 @@ img {
     transform: scale(1.03);
 
     box-shadow:
-        0 0 30px rgba(20, 184, 166, 0.7),
-        0 0 70px rgba(20, 184, 166, 0.3);
+        0 0 35px rgba(20, 184, 166, 0.7),
+        0 0 90px rgba(20, 184, 166, 0.3);
 }
 
 
@@ -406,7 +407,7 @@ img {
 .hero-content {
     width: 100%;
 
-    max-width: 850px;
+    max-width: 900px;
 
     display: flex;
 
@@ -427,7 +428,7 @@ img {
 
     letter-spacing: 4px;
 
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 
@@ -436,9 +437,9 @@ img {
 .hero-content h1 {
     font-size: clamp(2.8rem, 6vw, 5rem);
 
-    line-height: 1;
+    line-height: 1.05;
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 
@@ -458,7 +459,7 @@ img {
 /* Description */
 
 .hero-description {
-    max-width: 650px;
+    max-width: 700px;
 
     margin: 0 auto 30px;
 
@@ -479,11 +480,13 @@ img {
 
     justify-content: center;
 
+    align-items: center;
+
     flex-wrap: wrap;
 
     gap: 14px;
 
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 
@@ -492,6 +495,8 @@ img {
    ======================================== */
 
 .hero-tech {
+    width: 100%;
+
     display: flex;
 
     justify-content: center;
@@ -501,8 +506,6 @@ img {
     flex-wrap: wrap;
 
     gap: 10px;
-
-    width: 100%;
 }
 
 
@@ -519,6 +522,8 @@ img {
 
     font-size: 0.8rem;
 
+    font-weight: 600;
+
     transition:
         color 0.3s ease,
         border-color 0.3s ease,
@@ -527,9 +532,9 @@ img {
 
 
 .hero-tech span:hover {
-    border-color: #2dd4bf;
-
     color: #2dd4bf;
+
+    border-color: #2dd4bf;
 
     box-shadow:
         0 0 15px rgba(45, 212, 191, 0.2);
@@ -537,38 +542,38 @@ img {
 
 
 /* ========================================
-   HERO RESPONSIVE DESIGN
+   HERO RESPONSIVE
    ======================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     .hero {
         min-height: auto;
 
-        padding: 70px 5%;
+        padding: 60px 5% 80px;
 
-        gap: 40px;
+        gap: 35px;
     }
 
 
     .hero-image img {
-        width: 200px;
+        width: 250px;
+        height: 250px;
 
-        height: 200px;
+        min-width: 250px;
+        min-height: 250px;
     }
 
 
     .hero-image::before {
-        width: 230px;
-
-        height: 230px;
+        width: 290px;
+        height: 290px;
     }
 
 
     .hero-image::after {
-        width: 220px;
-
-        height: 220px;
+        width: 275px;
+        height: 275px;
     }
 
 
@@ -581,18 +586,6 @@ img {
 
     .hero-actions .btn {
         width: 100%;
-    }
-
-
-    .hero-tech {
-        gap: 8px;
-    }
-
-
-    .hero-tech span {
-        font-size: 0.75rem;
-
-        padding: 7px 11px;
     }
 }
 /* ========================================
