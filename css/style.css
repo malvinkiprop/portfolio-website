@@ -1,0 +1,182 @@
+/* ========================================
+   CSS RESET
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   ROOT VARIABLES
+   ======================================== */
+
+:root {
+    --color-primary: #0f172a;
+    --color-secondary: #334155;
+    --color-accent: #0f766e;
+    --color-accent-light: #14b8a6;
+
+    --color-background: #f8fafc;
+    --color-surface: #ffffff;
+    --color-text: #0f172a;
+    --color-text-light: #64748b;
+    --color-border: #e2e8f0;
+
+    --font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    --container-width: 1200px;
+
+    --transition:
+        0.3s ease;
+}
+
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ========================================
+   LAYOUT
+   ======================================== */
+
+.navbar,
+.hero,
+.projects,
+.about,
+.contact,
+.site-footer {
+    width: min(
+        100% - 2rem,
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.site-header {
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.navbar {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--color-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    transition:
+        color var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+
+/* ========================================
+   MAIN SECTIONS
+   ======================================== */
+
+.hero,
+.projects,
+.about,
+.contact {
+    min-height: 300px;
+
+    padding-block: 5rem;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.site-footer {
+    padding-block: 2rem;
+
+    border-top: 1px solid var(--color-border);
+
+    color: var(--color-text-light);
+
+    text-align: center;
+
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   RESPONSIVE NAVIGATION
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+
+        padding-block: 1.25rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
