@@ -2200,3 +2200,54 @@ footer {
     }
 
 }
+
+/* ========================================
+   MATERNAL HEALTH PROJECT VISUAL
+======================================== */
+
+.maternal-project-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(45, 212, 191, 0.18), transparent 35%),
+        radial-gradient(circle at 80% 75%, rgba(56, 189, 248, 0.13), transparent 35%),
+        linear-gradient(135deg, #07111f, #0b2430 55%, #102b36);
+}
+
+.maternal-visual-content {
+    max-width: 760px;
+    margin: auto;
+}
+
+.maternal-visual-content p {
+    color: var(--accent-light);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.maternal-visual-content h3 {
+    color: #f1f5f9;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.maternal-visual-content span {
+    color: #b8c5d6;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .maternal-project-visual {
+        min-height: 300px;
+        height: auto;
+        padding: 60px 22px 35px;
+    }
+}
