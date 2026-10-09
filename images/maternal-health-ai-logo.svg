@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+<title id="title">Explainable AI for Maternal Health Risk Stratification in Kenya</title>
+<desc id="desc">A futuristic maternal health emblem combining a mother and child, AI circuitry, health analytics and a map of Kenya.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06111f"/><stop offset=".55" stop-color="#092943"/><stop offset="1" stop-color="#031019"/></linearGradient>
+ <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25f0dc"/><stop offset="1" stop-color="#0879d9"/></linearGradient>
+ <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b8ff54"/><stop offset="1" stop-color="#00a878"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#18d9ce" stop-opacity=".32"/><stop offset="1" stop-color="#18d9ce" stop-opacity="0"/></radialGradient>
+ <filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
+</defs>
+<rect width="1200" height="520" rx="28" fill="url(#bg)"/>
+<circle cx="600" cy="260" r="235" fill="url(#glow)"/>
+<circle cx="600" cy="260" r="218" fill="none" stroke="url(#teal)" stroke-width="3" opacity=".8"/>
+<circle cx="600" cy="260" r="202" fill="none" stroke="#43f2d0" stroke-opacity=".2" stroke-width="1.5"/>
+<!-- AI neural network -->
+<g stroke="#28dff0" stroke-width="3" fill="none" opacity=".9">
+ <path d="M160 150L205 120L246 155L280 112M160 150L174 207L226 220L246 155M174 207L145 254L198 282L226 220M198 282L177 328L225 353L250 310M226 220L250 310L280 350"/>
+ <path d="M205 120L210 88M246 155L294 180L280 225L250 310M145 254L120 300L177 328"/>
+</g>
+<g fill="#62f6eb"><circle cx="160" cy="150" r="8"/><circle cx="205" cy="120" r="8"/><circle cx="246" cy="155" r="8"/><circle cx="280" cy="112" r="8"/><circle cx="174" cy="207" r="8"/><circle cx="226" cy="220" r="8"/><circle cx="145" cy="254" r="8"/><circle cx="198" cy="282" r="8"/><circle cx="177" cy="328" r="8"/><circle cx="225" cy="353" r="8"/><circle cx="250" cy="310" r="8"/><circle cx="294" cy="180" r="8"/><circle cx="280" cy="225" r="8"/></g>
+<rect x="187" y="224" width="90" height="55" rx="13" fill="#0a2841" stroke="url(#teal)" stroke-width="3"/><text x="232" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="26" fill="#8ffff1">AI</text>
+<!-- Mother silhouette and baby -->
+<path d="M490 145C466 104 500 70 545 78C580 84 602 115 591 147C584 166 565 178 559 199C553 220 572 236 594 245C629 260 671 271 691 304C710 336 702 375 678 398L626 431L478 431L442 388C429 367 433 333 446 303L473 246C485 222 489 197 475 178Z" fill="#071522" stroke="url(#teal)" stroke-width="3"/>
+<path d="M478 128C488 87 534 65 572 91C590 103 599 120 596 139C565 128 538 143 520 163C506 149 491 140 478 128Z" fill="url(#leaf)"/>
+<path d="M485 134C515 108 551 105 584 126M491 147C519 126 549 124 574 140" fill="none" stroke="#eaffff" stroke-width="5" stroke-linecap="round"/>
+<path d="M541 177C555 181 561 194 553 207" fill="none" stroke="#d3f9ff" stroke-width="3" stroke-linecap="round"/>
+<path d="M468 252C503 263 530 287 553 314C579 344 608 363 645 367C663 369 674 385 665 399C654 417 620 423 589 414L504 396C475 388 458 364 451 338Z" fill="#0b4963" stroke="#1ddbd0" stroke-width="3"/>
+<circle cx="586" cy="348" r="45" fill="#062039" stroke="#46f5dc" stroke-width="4"/>
+<path d="M560 349C572 329 600 327 613 347C621 363 609 381 586 393C563 380 551 365 560 349Z" fill="url(#teal)"/>
+<path d="M561 352L575 352L582 341L590 365L599 350L611 350" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- Health dashboard -->
+<rect x="744" y="123" width="150" height="205" rx="18" fill="#071b30" stroke="#16cce0" stroke-width="3"/>
+<path d="M765 183L787 183L797 163L808 201L821 175L833 183L858 183" fill="none" stroke="#8efbf0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="url(#teal)"><rect x="770" y="250" width="18" height="42" rx="3"/><rect x="798" y="231" width="18" height="61" rx="3"/><rect x="826" y="210" width="18" height="82" rx="3"/><rect x="854" y="188" width="18" height="104" rx="3"/></g>
+<path d="M770 307H872" stroke="#4bd9d6" stroke-opacity=".6" stroke-width="2"/>
+<!-- Kenya-inspired map pin and leaves -->
+<path d="M956 145L1005 157L1033 188L1022 220L1041 251L1018 282L1002 315L976 300L952 267L926 250L936 215L919 185Z" fill="#064f42" stroke="#69f4a2" stroke-width="3"/>
+<path d="M977 184C960 184 951 197 951 210C951 227 977 250 977 250S1003 227 1003 210C1003 197 994 184 977 184Z" fill="#f3ffff"/>
+<circle cx="977" cy="210" r="8" fill="#087c67"/>
+<path d="M390 405C337 359 312 400 349 431C381 455 425 444 450 427C430 421 410 414 390 405Z" fill="url(#leaf)"/>
+<path d="M815 418C858 365 902 382 878 420C861 442 830 447 803 437C808 430 811 424 815 418Z" fill="url(#leaf)"/>
+<g font-family="Arial,sans-serif" fill="#dffcff"><text x="600" y="470" font-size="23" text-anchor="middle" font-weight="700" letter-spacing="4">MATERNAL HEALTH • EXPLAINABLE AI</text><text x="600" y="496" font-size="12" text-anchor="middle" fill="#7fc7d7" letter-spacing="2">KENYA · DATA FOR BETTER CARE</text></g>
+</svg>
