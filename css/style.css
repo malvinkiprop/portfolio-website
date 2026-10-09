@@ -2206,49 +2206,44 @@ footer {
 ======================================== */
 
 .maternal-project-visual {
+    position: relative;
     display: block;
+    width: 100%;
+    height: 420px;
+    min-height: 0;
     padding: 0;
+    overflow: hidden;
     text-align: initial;
     background: #06111f;
 }
 
 .maternal-project-visual .project-image {
+    position: absolute;
+    inset: 0;
+    display: block;
     width: 100%;
     height: 100%;
+    max-width: none;
     object-fit: cover;
     object-position: center;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    transform: none;
 }
 
-.maternal-visual-content {
-    max-width: 760px;
-    margin: auto;
+.maternal-project-visual:hover .project-image {
+    transform: scale(1.015);
 }
 
-.maternal-visual-content p {
-    color: var(--accent-light);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    margin-bottom: 18px;
-}
-
-.maternal-visual-content h3 {
-    color: #f1f5f9;
-    font-size: clamp(2rem, 5vw, 3.8rem);
-    line-height: 1.1;
-    margin-bottom: 16px;
-}
-
-.maternal-visual-content span {
-    color: #b8c5d6;
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    line-height: 1.6;
+.maternal-project-visual .project-status {
+    z-index: 2;
 }
 
 @media (max-width: 600px) {
     .maternal-project-visual {
-        min-height: 300px;
-        height: 300px;
+        height: 280px;
+        min-height: 280px;
         padding: 0;
     }
 }
