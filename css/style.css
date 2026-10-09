@@ -2207,43 +2207,55 @@ footer {
 
 .maternal-project-visual {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 420px;
-    min-height: 0;
-    padding: 0;
+    height: 320px;
+    min-height: 320px;
+    padding: 18px;
     overflow: hidden;
     text-align: initial;
-    background: #06111f;
+    background: #050b12;
+    border-radius: 16px 16px 0 0;
 }
 
 .maternal-project-visual .project-image {
-    position: absolute;
-    inset: 0;
+    position: relative;
+    inset: auto;
     display: block;
     width: 100%;
     height: 100%;
-    max-width: none;
-    object-fit: cover;
+    max-width: 100%;
+    object-fit: contain;
     object-position: center;
     padding: 0;
+    margin: 0 auto;
     border: 0;
-    border-radius: 0;
+    border-radius: 10px;
     transform: none;
 }
 
 .maternal-project-visual:hover .project-image {
-    transform: scale(1.015);
+    transform: none;
 }
 
 .maternal-project-visual .project-status {
+    position: absolute;
     z-index: 2;
+    top: 18px;
+    left: 18px;
 }
 
 @media (max-width: 600px) {
     .maternal-project-visual {
-        height: 280px;
-        min-height: 280px;
-        padding: 0;
+        height: 260px;
+        min-height: 260px;
+        padding: 12px;
+    }
+
+    .maternal-project-visual .project-status {
+        top: 12px;
+        left: 12px;
     }
 }
